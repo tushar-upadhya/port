@@ -4,6 +4,7 @@ import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="container h-full mx-auto">
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left">
+          <div className="order-2 text-center xl:text-left xl:order-none ">
             <span className="text-xl">Frontend Developer</span>
             <h1 className="mb-6 h1">
               Hello I'm <br />{" "}
@@ -47,11 +48,13 @@ export default function Home() {
             </div>
           </div>
           {/* photo */}
-          <div>
+          <div className="order-1 mb-8 xl:order-none xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
+
+      <Stats />
     </section>
   );
 }
