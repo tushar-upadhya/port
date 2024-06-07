@@ -33,10 +33,10 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="flex items-center gap-2 uppercase rounded-full upp outline outline-accent"
+                className="flex items-center gap-2 uppercase rounded-full outline outline-accent"
               >
-                <span className="text-accent">Download CV</span>
-                <Download className="text-xl text-accent" />
+                <span>Download CV</span>
+                <Download className="text-xl" />
               </Button>
 
               <div className="mb-8 xl:mb-0">
