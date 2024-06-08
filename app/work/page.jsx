@@ -46,12 +46,16 @@ const WorkPage = () => {
                 {project.category} project
               </h2>
               {/* project description */}
+              <p className="font-semibold text-accent">{project.title}</p>
+
+              {/* <div className="border border-white/20" /> */}
+
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
               <ul className="flex gap-2">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-xs text-accent md:flex-row">
                       {item.name}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -104,15 +108,15 @@ const WorkPage = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-purple-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-transparent">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 z-10 w-full bg-black/10" />
+                      <div className="absolute top-0 bottom-0 z-10 w-full " />
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-fit"
                         />
                       </div>
                     </div>
